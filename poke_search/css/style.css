@@ -1,0 +1,600 @@
+/* =================================
+  Element Styles
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+height:100%;
+width:100%;
+overflow:hidden;
+}
+
+body {
+  font: 1em/1.5 'Roboto', sans-serif;
+  color: #222;
+  background: #f6f7f7;
+  padding-top: 145px;
+  padding-bottom: 3em;
+  margin: 0;
+  height:100%;
+  width:100%
+
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input {
+  font-size: 1.12em;
+  height: 46px;
+  padding-bottom: 1em;
+  padding-left: 0;
+  background: none;
+  border: none;
+  outline: 0;
+  border-bottom: 4px solid #e4e4e4;
+  transition: border-color .4s;
+}
+
+input ~ input {
+  margin-left: 5px;
+}
+
+input:focus {
+  border-color: #c1c1c1;
+}
+
+button {
+  width: 40px;
+  height: 35px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  outline: 0;
+  position: relative;
+  z-index: 2000;
+}
+
+/* =================================
+  Page Components
+==================================== */
+
+.main-title {
+  font-size: 1.4em;
+  line-height: 80px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.main-title:before {
+  font-family: 'Material Icons';
+  content: url("ball.png");
+
+  vertical-align: middle;
+  font-size: 1.5em;
+}
+
+.search-form input:last-of-type {
+  margin-right: -40px;
+}
+.search-form input:nth-of-type(1) {
+  width: 65%;
+}
+.search-form input:nth-of-type(2) {
+  width: 35%;
+}
+.search-form input:only-of-type {
+  width: 100%;
+  padding-right: 35px;
+}
+
+.search-button {
+  float: right;
+  margin-right: -10px;
+}
+
+.icn-search {
+  font-weight: 700;
+}
+
+.icon-help,
+.icn-album {
+  font-size: 6em;
+  margin-bottom: 12px;
+  color: #dfdfdf;
+  display: block;
+}
+
+/* album LIST COMPONENTS -------- */
+
+.no-albums,
+.desc  {
+  color: #b0b0b0;
+  height: 140px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+.album-list li {
+  margin: 1.925em 0 0;
+}
+
+.album-list a {
+  display: block;
+  margin: auto;
+}
+
+.album-title {
+  display: block;
+  font-size: 1.1em;
+  line-height: 1.2;
+  color: #000;
+  font-weight: 500;
+}
+
+.album-year {
+  color: #9d9d9d;
+}
+
+.container {
+height:90%;
+width:40%;
+margin:auto;
+transform:rotate(45deg) scale(0.5) translate(2000px, -2000px);
+transition: all 2000ms ease-in-out;
+opacity:0;
+
+
+
+}
+
+.pokeCard {
+	height: 80%;
+	width:60%;
+	margin:auto;
+	margin-top: 20px;
+	background-image: url("pokemon.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 6px solid #33ccff;
+	margin-bottom: .8em;
+	border-radius:7px;
+	box-shadow:5px 5px 5px  #888888;
+	transform: rotateY(0deg);
+	backface-visibility: hidden;
+	transition: transform .5s linear 0s;
+	perspective: 500px;
+	font-size:14px
+	
+	
+	
+	}
+	
+	.typeChart{
+		position:absolute;
+		height: 70%;
+	    width:60%;
+		margin-left:20%;
+	    margin-top: 20px;
+		border-radius:7px;
+		box-shadow:5px 5px 5px  #888888;
+		border: 6px solid #bfbfbf;
+		z-index:1;
+		bottom:70%;
+		transition: all 0.85s ease-in-out 0s;
+		opacity:0;
+		background-color:#808080;
+		
+		
+		}
+		
+	.showIt{
+		transform: translateY(83%);
+		opacity:1;
+		
+		
+	}
+	
+	.chartButton{
+	background-color: #808080;
+    font: 1em/1.5 'Roboto', sans-serif;
+	width:20%;
+	height: 8%;
+	border: 4px solid #d9d9d9;
+	border-radius:15%;
+	box-shadow:2px 2px 8px 8px #262626;
+	position:relative;
+	left:40%;
+		
+		
+	}
+	
+	
+	
+	.pokeCard2 {
+	height: 100%;
+	width:100%;
+	margin:auto;
+	margin-top: 20px;
+	background-image: url("pokemon.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 6px solid #33ccff;
+	margin-bottom: .8em;
+	border-radius:7px;
+	box-shadow:5px 5px 5px  #888888;
+	position:absolute;	
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+	transition: transform .5s linear 0s;
+	perspective: 500px;
+	font-size:12px;
+
+	
+	
+	}
+	
+	
+	.flipCard1{
+		transform: rotateY(-180deg);
+		perspective: 500px;
+		
+	}
+	.flipCard2{
+		transform: rotateY(0deg);
+		perspective: 500px;
+		
+	}
+	
+.animationtime{
+	opacity:1;
+    transform: rotate(0deg) scale(1);
+	}
+	
+
+.pokeimg {
+	
+	float:right;
+	border: 3px solid #33ccff;
+	border-radius:7px;
+    background-image: url("shiny.jpg");
+	box-shadow:5px 5px 5px  #888888;
+}
+
+.little_ball {
+	height:40px;
+	width:40px;
+	background-color:pink;
+	
+	margin-top:10px;
+		
+}
+
+.container{
+	display:flex;
+}
+
+.error {
+	margin:auto;
+	height:200px;
+	width:200px;
+	text-align: center;
+	padding-top: 10%;
+	font-size:18px;
+	background-color:  #e6e600;
+	border: solid black 5px;
+	border-radius:10%;
+	color:#e62e00;
+	
+}
+
+.pikka {border-radius:50%;
+;}
+
+.randomButton{
+
+	margin:auto;
+	width:80px;
+	height:80px;
+	border-radius:50%;
+	background-image: url("Pokeball.png");
+	background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+	}
+	
+	.frontButton{
+	
+	position:relative;
+	top:10%;
+	margin-left:20%;
+	margin-right:20%;
+	background-color: #ffcc00;
+    font: 1em/1.5 'Roboto', sans-serif;
+	width:60%;
+	border: 6px solid #33ccff;
+	border-radius:15%;
+	box-shadow:2px 2px 8px 8px #8c8c8c
+	
+	}
+	
+	.frontButton2{
+	
+	position:relative;
+	top:15%;
+	margin-left:20%;
+	margin-right:20%;
+	background-color: #ffcc00;
+    font: 1em/1.5 'Roboto', sans-serif;
+	width:60%;
+	border: 6px solid #33ccff;
+	border-radius:15%;
+	box-shadow:2px 2px 8px 8px #8c8c8c
+	
+	}
+	
+	
+	
+	
+	.frontButton:hover, .backButton:hover, .frontButton2:hover{
+		box-shadow:1px 1px 1px 4px #8c8c8c;
+		background-color: #e6b800;
+	}
+	
+	
+	.backButton{
+			position:relative;
+	top:10%;
+	margin-left:20%;
+	margin-right:20%;
+	background-color: #ffcc00;
+    font: 1em/1.5 'Roboto', sans-serif;
+	width:60%;
+	border: 6px solid #33ccff;
+	border-radius:15%;
+	box-shadow:2px 2px 8px 8px #8c8c8c
+		
+	}
+
+
+.spinner{
+	border: 5px solid transparent;
+	border-top-color: red;
+	border-bottom-color: red;
+	animation: spinny 2s linear infinite
+	}
+
+@keyframes spinny {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+	
+	
+}
+
+
+.randomText{
+	margin:auto;
+	width:40%;
+	text-align: center
+}
+
+button{
+	width:80px;
+	height:80px;
+}
+
+.butty{height:100%;
+width:100%}
+
+.-placeholder {
+  color: #dadada;
+  font-size: 5em;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+/* =================================
+  Layout Styles
+==================================== */
+
+.inner,
+.main-content {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-image: url("main_pokemon.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+  
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  min-height: 80px;
+  z-index: 1000;
+  
+}
+
+
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media (min-width: 0) and (max-width: 549px) {
+  .album-list li {
+    text-align: center;
+  }
+}
+
+@media (min-width: 550px) {
+  }
+
+  .pokeCard {
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+  .main-title {
+    float: left;
+  }
+
+  .search-form {
+    width: 422px;
+    float: right;
+    margin-top: 34px;
+  }
+
+  .album-list li {
+    width: 33.333333333%;
+  }
+}
+
+
+
+@media (min-width: 1000px) {
+  .album-list li {
+    width: 25%;
+  }
+
+  .album-list li:nth-of-type(4n+1) {
+    clear: left;
+	
+	
+	
+		
+	}
+
+  }
+
+
+@media (max-width: 1100px) {
+	
+	.pokeimg{
+		height:125px;
+		width:125px;
+	}
+		
+		.main-title{
+			display:none;
+		
+				
+		}
+	
+	  .randomButton{
+	  height:60px;
+	  width:60px;
+	  position:relative;
+	  top:30px;
+	  right:30%;}
+	  
+
+	
+	.randomText{float:left;}
+	
+.typeChart{
+	     width:100%;
+         margin-left:0%;
+	    margin-top: 0px;}
+		
+		
+		 
+	 .pokeCard2{
+		 font-size:11px;}
+		
+		
+}
+
+@media (max-width: 750px) {
+	.randomText{display:none;}
+	
+	.randomButton{right:45%;}
+	
+	.pokeimg{
+		height:100px;
+		width:100px;
+	}
+	
+	.container{
+		width:60%;}
+		
+		
+	 
+	 .pokeCard{
+		 font-size:11px;}
+	 
+	 
+	 
+}
+
+@media (max-width: 500px) {
+	#search{width:300px;}
+	
+	.material-icons{float:right;}
+	
+	
+	
+}
+
+@media (max-width: 900px) {
+	
+     
+	 
+	 
+	 .butty{position:relative;
+	 right:0%;
+	 bottom:140%;
+	 
+	 
+	 }
+	
+}
+
+@media (max-width: 400px) {
+	.container{
+		width:100%;
+		}
+		
+		.pokeCard{
+		 font-size:10px;}
+	 
+	 .pokeCard2{
+		 font-size:10px;}
+	
+	
+	
+}
+
+
+@media (min-height: 1100px) {
+	.container{height:800px;
+	width:500px;
+	position:relative;
+	top:10%}
+	
